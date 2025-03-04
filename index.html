@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio - Studio ChapChap</title>
+        <!-- Lien vers Google Fonts pour Syne Tactile -->
+        <link href="https://fonts.googleapis.com/css2?family=Syne+Tactile:wght@300;400;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            /* Style de base pour le tooltip */
+            .tooltip {
+                position: relative;
+                display: inline-block;
+            }
+
+            .tooltip .tooltip-text {
+                visibility: hidden;
+                width: 120px;
+                background-color: #646C36;
+                color: #fff;
+                text-align: center;
+                border-radius: 5px;
+                padding: 5px;
+                font-size: 14px;
+                position: absolute;
+                z-index: 1;
+                bottom: 125%; /* Positionner le tooltip au-dessus */
+                left: 50%;
+                margin-left: -60px; /* Centrer le tooltip */
+                opacity: 0;
+                transition: opacity 0.3s;
+            }
+
+            .tooltip:hover .tooltip-text {
+                visibility: visible;
+                opacity: 1;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <img src="assets/logo.png" id="logo" alt="Logo Studio ChapChap">
+        </header>
+        <div class="container">
+            <img src="assets/ouvremoi.png" alt="ouvrir moi" class="logo">
+            <img src="assets/valise.png" id="valise" alt="Valise" onclick="ouvrirValise()">
+            
+            <div id="contenu" class="hidden">
+                <div class="tooltip">
+                    <img src="assets/carnet.png" class="objet" onclick="goToPage('dessin.html')" alt="Carnet">
+                    <span class="tooltip-text">Illustrations</span>
+                </div>
+                <div class="tooltip">
+                    <img src="assets/telephone.png" class="objet" onclick="goToPage('animations-courtes.html')" alt="Animations Courtes">
+                    <span class="tooltip-text">Animations Courtes</span>
+                </div>
+                <div class="tooltip">
+                    <img src="assets/badge.png" class="objet" onclick="goToPage('presentation.html')" alt="Badge">
+                    <span class="tooltip-text">Présentation</span>
+                </div>
+                <div class="tooltip">
+                    <img src="assets/camera.png" class="objet" onclick="goToPage('video.html')" alt="Video">
+                    <span class="tooltip-text">Clips et courts métrages</span>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script src="script.js"></script>
+
+</body>
+
+<footer>
+    <div class="footer-links">
+        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="confidentialite.html">Politique de confidentialité</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</footer>
+
+</html>
