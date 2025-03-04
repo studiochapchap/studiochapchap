@@ -1,0 +1,139 @@
+/* Curseur personnalisé */
+html, body {
+    cursor: url('assets/petiteclef.png'), auto;
+    background: url('assets/fond.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+a, button, img, .objet {
+    cursor: url('assets/petiteclef.png'), auto !important;
+}
+
+header {
+    text-align: center;
+    margin-top: 5px;
+}
+
+#logo {
+    width: 200px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+}
+#valise {
+    width: 450px; /* Taille initiale de la valise fermée */
+    cursor: pointer;
+    transition: width 0.5s ease, transform 0.5s ease; /* Ajout de la transition de transformation */
+    position: relative;
+    transform: translateY(-40px); /* Remonte légèrement la valise */
+}
+
+#valise:hover {
+    transform: scale(1.05) translateY(-40px);
+}
+
+#valise.ouverte {
+    width: 650px !important; /* Taille de la valise ouverte */
+    transform: translateY(-120px); /* Fait remonter encore plus la valise */
+    transition: width 0.5s ease, transform 0.5s ease;
+}
+.hidden {
+    display: none;
+}
+
+#contenu {
+    position: absolute;
+    top: 80%; /* Position ajustée dans la valise */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none; /* Cacher les objets au départ */
+}
+
+#contenu.visible {
+    display: block; /* Afficher les objets quand la valise est ouverte */
+}
+
+.objet {
+    width: 130px;
+    margin: 40px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.objet:hover {
+    transform: scale(1.2);
+}
+
+/* Appliquer Syne Tactile à toute la page */
+body {
+    font-family: 'Syne Tactile', sans-serif;
+    color: #646C36; /* Couleur du texte */
+    margin: 0;
+    padding: 0;
+}
+
+/* Si vous souhaitez avoir des titres différents, vous pouvez aussi appliquer Syne Tactile aux titres */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Syne Tactile', sans-serif;
+    font-weight: 300; /* Poids plus fort pour les titres */
+}
+
+/* Si vous avez des boutons ou des éléments spécifiques à personnaliser */
+button, input, textarea {
+    font-family: 'Syne Tactile', sans-serif;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #646C36;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #646C36;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    background-color: transparent;
+    color: rosybrown;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-links a, .footer-social a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer-social img {
+    width: 24px;
+    height: 24px;
+}
