@@ -137,3 +137,27 @@ footer {
     width: 24px;
     height: 24px;
 }
+
+/* Styles par défaut (desktop) */
+body {
+    font-size: 18px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Version mobile : moins de 768px */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .container {
+        flex-direction: column; /* Empile les éléments */
+    }
+
+    img {
+        width: 100%; /* Images responsives */
+        height: auto;
+    }
+}
