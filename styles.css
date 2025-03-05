@@ -1,3 +1,31 @@
+#contenu {
+    position: relative; /* Permet aux objets d'être positionnés en fonction de ce conteneur */
+    top: 75%; /* Remonte légèrement les objets */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none; /* Caché au départ */
+    width: 100%;
+    height: 100%;
+}
+
+.objet {
+    position: relative;
+    width: 90px; /* Taille légèrement réduite */
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+/* Répartition des objets sur deux lignes */
+.objet:nth-child(1) { top: 20%; left: 25%; } /* Ligne du haut */
+.objet:nth-child(2) { top: 20%; left: 65%; }
+
+.objet:nth-child(3) { top: 55%; left: 30%; } /* Ligne du bas */
+.objet:nth-child(4) { top: 55%; left: 60%; }
+
+.objet:hover {
+    transform: scale(1.2);
+}
+
 /* Curseur personnalisé */
 html, body {
     cursor: url('assets/petiteclef.png'), auto;
@@ -36,7 +64,7 @@ header {
     width: 450px; /* Taille initiale de la valise fermée */
     cursor: pointer;
     transition: width 0.5s ease, transform 0.5s ease; /* Ajout de la transition de transformation */
-    position: relative;
+                position: relative;
     transform: translateY(-40px); /* Remonte légèrement la valise */
 }
 
@@ -63,7 +91,7 @@ header {
 
 #contenu.visible {
     display: block; /* Afficher les objets quand la valise est ouverte */
-}
+            }
 
 .objet {
     width: 130px;
@@ -101,7 +129,7 @@ button, input, textarea {
 }
 
 button {
-    background-color: #646C36;
+                background-color: #646C36;
     color: white;
     cursor: pointer;
 }
@@ -120,7 +148,7 @@ button:hover {
 footer {
     background-color: transparent;
     color: rosybrown;
-    text-align: center;
+                text-align: center;
     padding: 15px;
     position: fixed;
     bottom: 0;
@@ -159,5 +187,23 @@ body {
     img {
         width: 100%; /* Images responsives */
         height: auto;
+    } 
+}
+@media screen and (max-width: 768px) {
+    #valise {
+        width: 350px; /* Réduire la taille de la valise */
     }
+
+    #valise.ouverte {
+        width: 500px; /* Adapter la taille quand elle est ouverte */
+    }
+
+    .objet {
+        width: 80px; /* Réduire encore la taille des objets */
+    }
+
+    .objet:nth-child(1) { top: 15%; left: 15%; }
+    .objet:nth-child(2) { top: 50%; left: 25%; }
+    .objet:nth-child(3) { top: 40%; left: 65%; }
+    .objet:nth-child(4) { top: 70%; left: 45%; }
 }
