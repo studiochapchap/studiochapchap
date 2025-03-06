@@ -1,30 +1,40 @@
 #contenu {
-    position: relative; /* Permet aux objets d'être positionnés en fonction de ce conteneur */
-    top: 75%; /* Remonte légèrement les objets */
+    position: relative;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: none; /* Caché au départ */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2px;  /* Réduire l'espacement entre les objets */
     width: 100%;
     height: 100%;
+    max-width: 600px;
 }
 
 .objet {
     position: relative;
-    width: 90px; /* Taille légèrement réduite */
+    width: 70px;  /* Réduire la taille des objets pour rapprocher visuellement */
     cursor: pointer;
     transition: transform 0.3s;
+    flex-basis: 40px;
 }
 
-/* Répartition des objets sur deux lignes */
-.objet:nth-child(1) { top: 20%; left: 25%; } /* Ligne du haut */
-.objet:nth-child(2) { top: 20%; left: 65%; }
+/* Descendre les objets du rang du haut */
+.objet:nth-child(1), .objet:nth-child(2) {
+    flex-basis: 25%;  /* Deux objets sur la première ligne */
+    margin-top: 40px;  /* Descendre les objets du rang du haut */
+}
 
-.objet:nth-child(3) { top: 55%; left: 30%; } /* Ligne du bas */
-.objet:nth-child(4) { top: 55%; left: 60%; }
+/* Ajuster les objets du rang du bas */
+.objet:nth-child(3), .objet:nth-child(4) {
+    flex-basis: 25%; 
+    margin-top: -5;  /* Pas de marge en haut pour les objets du bas */
+}
 
 .objet:hover {
-    transform: scale(1.2);
+    transform: scale(1.05);  /* Réduire l'effet d'agrandissement */
 }
+
 
 /* Curseur personnalisé */
 html, body {
@@ -129,7 +139,7 @@ button, input, textarea {
 }
 
 button {
-                background-color: #646C36;
+    background-color: #646C36;
     color: white;
     cursor: pointer;
 }
@@ -145,18 +155,25 @@ button:hover {
     justify-content: center;
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
 footer {
+    text-align: center;
     background-color: transparent;
-    color: rosybrown;
-                text-align: center;
     padding: 15px;
     position: fixed;
     bottom: 0;
     width: 100%;
+    left: 0; /* Assure que le footer commence bien à gauche */
 }
 
+
 .footer-links a, .footer-social a {
-    color: white;
+    color: #646C36;
     margin: 0 10px;
     text-decoration: none;
 }
@@ -206,4 +223,135 @@ body {
     .objet:nth-child(2) { top: 50%; left: 25%; }
     .objet:nth-child(3) { top: 40%; left: 65%; }
     .objet:nth-child(4) { top: 70%; left: 45%; }
+}
+/* Spécifique à video.html */
+body.video-page header {
+    margin-top: -20px;
+}
+
+body.video-page #logo {
+    width: 180px;
+}
+
+body.video-page .container {
+    width: 60%;
+    margin-bottom: 50px;
+}
+
+body.video-page .footer-links {
+    font-family: 'Syne Tactile', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+body.video-page .footer-links a {
+    color: #646C36;
+    text-decoration: none;
+    margin: 0 15px;
+    display: inline-block;
+}
+
+body.video-page .footer-links a::before {
+    content: "✉️ ";
+}
+
+body.video-page .footer-links a:hover {
+    text-decoration: underline;
+}
+
+body.video-page .container {
+    margin-bottom: 500px;
+}
+
+
+.video-container {
+    position: relative;
+    max-width: 80%;
+    margin: 20px auto;
+    background-image: url('assets/telecanap.png'); /* Ajouter ici l'image de fond du salon */
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-container * {
+    margin: 0 10px;
+}
+
+.video-wrapper {
+    position: relative;
+    text-align: center;
+    max-width: 100%;
+    height: 60vh;
+    aspect-ratio: 16 / 9; /* Ratio 16:9 pour garder les proportions de la vidéo */
+}
+
+.video-wrapper.tall {
+    aspect-ratio: 9 / 16; /* Ratio 9:16 pour les vidéos verticales */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.arrow {
+    position: relative;
+    top: 50%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+    padding: 0;
+}
+
+.arrow:hover {
+    transform: scale(1.05);  /* Inclure le transform de .arrow */
+    background: none;
+}
+
+.arrow img {
+    width: 100%;
+    height: auto;
+}
+
+.arrow.left {
+    max-width: 100px;
+}
+
+.arrow.right {
+    max-width: 100px;
+}
+
+footer {
+    background-color: transparent;
+    padding: 20px;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }

@@ -61,8 +61,37 @@ document.getElementById("contact-form").addEventListener("submit", function(even
         alert("Erreur lors de l'envoi. Veuillez réessayer.");
     });
 });
+
+let currentVideoIndex = 0;
+const videos = [
+    "https://www.youtube.com/embed/dQw4w9WgXcQ",  // Exemple vidéo YouTube
+    "video2.mp4",  // Exemple vidéo MP4
+    "https://www.youtube.com/embed/XYZ",  // Autre vidéo YouTube
+];
+
+function changeVideo(direction) {
+    currentVideoIndex += direction;
+
+    // Boucle autour des vidéos
+    if (currentVideoIndex < 0) {
+        currentVideoIndex = videos.length - 1;
+    } else if (currentVideoIndex >= videos.length) {
+        currentVideoIndex = 0;
+    }
+
+    // Changer la source de la vidéo
+    const videoElement = document.getElementById('video');
+    const videoSrc = videos[currentVideoIndex];
+    if (videoSrc.includes('youtube')) {
+        videoElement.src = videoSrc;
+    } else {
+        videoElement.src = videoSrc;
+    }
+}
+
     
 });
+
 
 
 
