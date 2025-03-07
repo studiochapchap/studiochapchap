@@ -66,7 +66,7 @@ header {
 }
 
 .logo {
-    width: 200px;
+    max-width: 200px;
     height: auto;
     margin-bottom: 10px;
 }
@@ -160,35 +160,32 @@ html, body {
     padding: 0;
     width: 100%;
 }
-
 footer {
-    text-align: center;
     background-color: transparent;
-    padding: 15px;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
     position: fixed;
     bottom: 0;
-    width: 100%;
-    left: 0; /* Assure que le footer commence bien à gauche */
+    left: 0; /* Assurer que le footer prend toute la largeur */
+    margin: 0; /* Assurer qu'aucune marge n'est appliquée */
+    color: #646C36 !important; /* Placer !important après la couleur */
 }
 
-
-.footer-links a, .footer-social a {
-    color: #646C36;
-    margin: 0 10px;
-    text-decoration: none;
-}
-
-.footer-social img {
-    width: 24px;
-    height: 24px;
-}
-
-/* Styles par défaut (desktop) */
-body {
+footer .footer-links {
     font-size: 18px;
-    max-width: 1200px;
-    margin: auto;
 }
+
+footer a {
+    color: #646C36 !important; /* Placer !important après la couleur pour les liens */
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
 
 /* Version mobile : moins de 768px */
 @media screen and (max-width: 768px) {
