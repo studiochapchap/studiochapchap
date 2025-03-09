@@ -6,15 +6,21 @@
     <title>Page Vidéos</title>
     <link href="https://fonts.googleapis.com/css2?family=Syne+Tactile&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        #video-caption {
+            font-size: 1.5em; /* Increase the font size */
+            font-weight: bold; /* Make the text bold */
+            padding: 10px; /* Add some padding */
+            text-align: center; /* Center the text */
+        }
+    </style>
 </head>
 <body>
     <header>
         <a href="index.html">
-            <img src="assets/logo.png" id="logo" alt="Logo Studio ChapChap">
+            <img src="assets/logoclips.png" id="logo" alt="Logo Studio ChapChap">
         </a>
     </header>
-
-    <h1 style="text-align: center;">Clips et courts métrages</h1>
 
     <div class="video-container">
         <button class="arrow left" onclick="changeVideo(-1)">
@@ -23,6 +29,7 @@
         
         <div class="video-wrapper">
             <iframe id="video" src="https://www.youtube.com/embed/iHt_7dmOwFk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div id="video-caption">Clip du morceau "A tous ceux" de Lucil</div>
         </div>
         
         <button class="arrow right" onclick="changeVideo(1)">
@@ -30,28 +37,28 @@
         </button>
 
         <script>
-            const videoUrls = [
-                "https://www.youtube.com/embed/iHt_7dmOwFk",
-                "https://www.youtube.com/embed/P6RYh5vQAmA"
+            const videos = [
+                {
+                    url: "https://www.youtube.com/embed/iHt_7dmOwFk",
+                    caption: "Clip du morceau \"A tous ceux\" de Lucil"
+                },
+                {
+                    url: "https://www.youtube.com/embed/P6RYh5vQAmA",
+                    caption: "Partie animée du court-métrage Lilith de Cyrielle Le Roch"
+                }
             ];
 
             let currentVideoIndex = 0;
             const videoElement = document.getElementById('video');
+            const captionElement = document.getElementById('video-caption');
 
             function changeVideo(direction) {
-                currentVideoIndex = (currentVideoIndex + direction + videoUrls.length) % videoUrls.length;
-                videoElement.src = videoUrls[currentVideoIndex];
+                currentVideoIndex = (currentVideoIndex + direction + videos.length) % videos.length;
+                videoElement.src = videos[currentVideoIndex].url;
+                captionElement.textContent = videos[currentVideoIndex].caption;
             }
         </script>
     </div>
-
-    <footer>
-        <div class="footer-links" style="text-align: center; font-size: 18px;color: #646C36">
-              <a href="mentionslegales.html">Mentions légales</a>
-              <a href="confidentialite.html">Politique de confidentialité</a>
-              <a href="contact.html"> Contact</a>
-        </div>
-   </footer>
 
     <script src="scripts.js"></script>
 </body>
