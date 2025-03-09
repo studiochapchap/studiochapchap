@@ -353,3 +353,238 @@ footer a:hover {
     text-decoration: underline;
 }
 
+/* Styles pour mobile */
+@media (max-width: 768px) {
+    .tooltip .tooltip-text {
+        width: 100px; /* Ajuster la taille du tooltip pour mobile */
+    }
+
+    .objet {
+        width: 60px; /* Réduire la taille des objets sur mobile */
+        height: 60px;
+    }
+
+    /* Alignement des objets en une seule colonne sur mobile */
+    #contenu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Réduire la taille de la valise */
+    #valise {
+        width: 150px;
+    }
+
+    footer {
+        font-size: 14px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ajuster la taille de l'image de la valise */
+    #valise {
+        width: 120px;
+    }
+
+    /* Taille des objets plus petites */
+    .objet {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* Espaces réduits et interface plus simple */
+    #contenu {
+        gap: 15px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+}
+
+/* Style global */
+body {
+    font-family: 'Syne Tactile', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.portrait {
+    width: 600px; /* Augmentation de la taille de l'image */
+    height: auto;
+    margin-right: 30px; /* Décalage plus important de l'image */
+}
+
+/* Container de présentation */
+.presentation-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    max-width: 1000px;
+    margin: 100px auto;
+    flex-wrap: wrap; /* Permet aux éléments de se réorganiser sur mobile */
+}
+
+.texte-presentation {
+    font-family: 'Syne Tactile', sans-serif;
+    color: #646C36;
+    font-size: 24px;
+    max-width: 600px;
+}
+
+/* Conteneur et texte d'informations Paris */
+.info-paris-container {
+    display: flex;
+    align-items: center;
+}
+
+.info-paris {
+    width: 70px;
+    height: auto;
+}
+
+.info-paris-text {
+    margin-left: 15px;
+    font-size: 22px;
+    color: #646C36;
+}
+
+/* Section contacts */
+.contacts {
+    margin-top: 100px;
+    font-size: 24px;
+}
+
+.contacts a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #646C36;
+    margin: 10px 0;
+    font-size: 24px;
+}
+
+.contacts img {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+}
+
+/* Section Actualités */
+.actualites {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.actualites h2 {
+    font-family: 'Syne Tactile', sans-serif;
+    color: #646C36;
+    font-size: 28px;
+    text-align: center;
+}
+
+.actualites p {
+    font-family: 'Syne Tactile', sans-serif;
+    color: #333;
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+/* Retour menu */
+.retour-menu {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+.retour-menu a {
+    text-decoration: none;
+    color: #646C36;
+    font-weight: bold;
+}
+
+/* Media Queries pour mobile */
+@media (max-width: 768px) {
+    .presentation-container {
+        flex-direction: column; /* Passer en colonne sur les petits écrans */
+        align-items: center;
+        margin: 50px 20px; /* Réduire la marge */
+    }
+
+    .portrait {
+        width: 100%; /* L'image prend toute la largeur disponible */
+        margin-right: 0;
+        margin-bottom: 20px; /* Espacement sous l'image */
+    }
+
+    .texte-presentation {
+        font-size: 20px; /* Réduire la taille du texte */
+        max-width: 100%; /* Largeur maximale du texte */
+    }
+
+    .info-paris-container {
+        justify-content: center;
+    }
+
+    .contacts {
+        font-size: 20px; /* Réduire la taille du texte */
+    }
+
+    .contacts a {
+        font-size: 18px; /* Réduire la taille des liens */
+    }
+
+    .actualites h2 {
+        font-size: 24px; /* Réduire la taille du titre */
+    }
+
+    .actualites p {
+        font-size: 18px; /* Réduire la taille des paragraphes */
+    }
+
+    .retour-menu a {
+        font-size: 18px; /* Réduire la taille du lien retour */
+    }
+}
+
+@media (max-width: 480px) {
+    .portrait {
+        width: 100%; /* Réduire la largeur à 100% pour les très petits écrans */
+    }
+
+    .texte-presentation {
+        font-size: 18px; /* Réduire encore la taille du texte */
+    }
+
+    .info-paris-container {
+        flex-direction: column; /* Mettre le texte sous l'image pour les petits écrans */
+        align-items: center;
+    }
+
+    .info-paris {
+        width: 50px; /* Réduire la taille de l'icône Paris */
+    }
+
+    .contacts {
+        font-size: 18px;
+    }
+
+    .actualites h2 {
+        font-size: 22px;
+    }
+
+    .actualites p {
+        font-size: 16px;
+    }
+
+    .retour-menu a {
+        font-size: 16px;
+    }
+}
