@@ -22,6 +22,7 @@
         .tooltip {
             position: relative;
             display: inline-block;
+            text-align: center; /* Align legends with objects */
         }
 
         .tooltip .tooltip-text {
@@ -50,28 +51,38 @@
         /* Media query for mobile devices */
         @media (max-width: 600px) {
             .logo {
-                display: none; /* Hide "ouvre moi" */
+            display: none; /* Hide "ouvre moi" */
             }
 
             #valise {
-                display: none; /* Hide the suitcase */
+            display: none; /* Hide the suitcase */
             }
 
             #contenu {
-                display: block; /* Make the objects visible */
+            display: grid; /* Use grid layout */
+            grid-template-columns: repeat(2, 1fr); /* Two objects per row */
+            gap: 15px; /* Add more spacing between objects */
+            justify-items: center; /* Center objects horizontally */
+            padding: 10px; /* Add padding for better spacing */
             }
 
             .tooltip .tooltip-text {
-                visibility: visible; /* Always show legends */
-                opacity: 1;
-                position: static; /* Remove absolute positioning */
-                margin-left: 0; /* Reset centering */
-                bottom: auto; /* Reset positioning */
-                background-color: transparent; /* Remove background */
-                color: #646C36; /* Change text color */
-                font-size: 16px; /* Adjust font size */
-                text-align: center;
-                padding: 0; /* Remove padding */
+            visibility: visible; /* Always show legends */
+            opacity: 1;
+            position: static; /* Remove absolute positioning */
+            margin-left: 0; /* Reset centering */
+            bottom: auto; /* Reset positioning */
+            background-color: transparent; /* Remove background */
+            color: #646C36; /* Change text color */
+            font-size: 14px; /* Adjust font size for readability */
+            text-align: center;
+            padding: 5px; /* Add slight padding for better spacing */
+            word-wrap: break-word; /* Ensure text wraps properly */
+            }
+
+            .objet {
+            width: 80px; /* Adjust object size for smaller screens */
+            height: auto; /* Maintain aspect ratio */
             }
         }
     </style>
