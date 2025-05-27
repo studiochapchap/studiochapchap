@@ -1,86 +1,101 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Studio ChapChap - Mobile</title>
-    <link href="https://fonts.googleapis.com/css2?family=Syne+Tactile:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Syne Tactile', sans-serif;
-            background-color: #fff;
-            color: #646C36;
-            text-align: center;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio ChapChap - Mobile</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne+Tactile:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Syne Tactile', sans-serif;
+      background-image: url('assets/fond.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #646C36;
+      text-align: center;
+    }
 
-        header img {
-            max-width: 200px;
-            margin: 20px auto;
-            display: block;
-        }
+    header img {
+      max-width: 200px;
+      margin: 20px auto;
+      display: block;
+    }
 
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 30px;
-            padding: 20px;
-        }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      padding: 20px;
+    }
 
-        .objet {
-            width: 140px;
-            height: auto;
-        }
+    .objet-block {
+      background-color: transparent;
+      padding: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
 
-        .legend {
-            font-size: 16px;
-            margin-top: 10px;
-        }
+    .objet {
+      width: 140px;
+      height: auto;
+    }
 
-        footer {
-            margin-top: 40px;
-            font-size: 14px;
-        }
+    .legend {
+      font-size: 16px;
+      margin-top: 10px;
+    }
 
-        footer a {
-            color: #646C36;
-            text-decoration: none;
-            margin: 0 10px;
-        }
+    footer {
+      margin-top: 40px;
+      font-size: 14px;
+      background-color: transparent;
+      padding: 20px;
+    }
 
-        footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    footer a {
+      color: #646C36;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <img src="assets/logo.png" alt="Logo Studio ChapChap">
-    </header>
+  <header>
+    <img src="assets/logo.png" alt="Logo Studio ChapChap">
+  </header>
 
-    <div class="container">
-        <div onclick="location.href='dessin.html'">
-            <img src="assets/carnet.png" class="objet" alt="Illustrations">
-            <div class="legend">Illustrations</div>
-        </div>
-        <div onclick="location.href='video.html'">
-            <img src="assets/camera.png" class="objet" alt="Clips et courts métrages">
-            <div class="legend">Clips et courts métrages</div>
-        </div>
-        <div onclick="location.href='animations-courtes.html'">
-            <img src="assets/telephone.png" class="objet" alt="Animations courtes">
-            <div class="legend">Animations courtes</div>
-        </div>
-        <div onclick="location.href='presentation.html'">
-            <img src="assets/badge.png" class="objet" alt="Présentation">
-            <div class="legend">Présentation</div>
-        </div>
+  <div class="container">
+    <div class="objet-block" onclick="location.href='dessin.html'">
+      <img src="assets/carnet.png" class="objet" alt="Illustrations">
+      <div class="legend">Illustrations</div>
     </div>
 
-    <footer>
-        <a href="mentionslegales.html">Mentions légales</a>
-        <a href="confidentialite.html">Politique de confidentialité</a>
-    </footer>
+    <div class="objet-block" onclick="location.href='video.html'">
+      <img src="assets/camera.png" class="objet" alt="Clips et courts métrages">
+      <div class="legend">Clips et courts métrages</div>
+    </div>
+
+    <div class="objet-block" onclick="location.href='animations-courtes.html'">
+      <img src="assets/telephone.png" class="objet" alt="Animations courtes">
+      <div class="legend">Animations courtes</div>
+    </div>
+
+    <div class="objet-block" onclick="location.href='presentation.html'">
+      <img src="assets/badge.png" class="objet" alt="Présentation">
+      <div class="legend">Présentation</div>
+    </div>
+  </div>
+
+  <footer>
+    <a href="mentionslegales.html">Mentions légales</a>
+    <a href="confidentialite.html">Politique de confidentialité</a>
+  </footer>
 </body>
 </html>
