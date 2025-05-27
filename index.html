@@ -1,117 +1,148 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-            <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-W6HDQ4X3');</script>
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-W6HDQ4X3');</script>
     <!-- End Google Tag Manager -->
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Portfolio - Studio ChapChap</title>
-        <!-- Lien vers Google Fonts pour Syne Tactile -->
-        <link href="https://fonts.googleapis.com/css2?family=Syne+Tactile:wght@300;400;600&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="styles.css">
-        <style>
-            /* Style de base pour le tooltip */
-            .tooltip {
-                position: relative;
-                display: block;
-                text-align: center;
-                margin-bottom: 20px;
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Studio ChapChap</title>
+
+    <!-- Lien vers Google Fonts pour Syne Tactile -->
+    <link href="https://fonts.googleapis.com/css2?family=Syne+Tactile:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Style de base pour le tooltip */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            text-align: center; /* Align legends with objects */
+        }
+
+        .tooltip .tooltip-text {
+            visibility: hidden;
+            display: none;
+            width: 120px;
+            background-color: #646C36;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px;
+            display: block; /* Ensure objects and legends appear directly */
+            font-size: 14px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%; /* Positionner le tooltip au-dessus */
+            left: 50%;
+            margin-left: -60px; /* Centrer le tooltip */
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tooltip:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* Media query for mobile devices */
+        @media (max-width: 600px) {
+            .logo {
+                display: none; /* Hide "ouvre moi" */
+            }
+            .objet {
+                width: 100px; /* Increase object size for better visibility */
+                height: auto; /* Maintain aspect ratio */
+            }
+            #contenu {
+                grid-template-columns: 1fr; /* One object per row */
+                gap: 10px; /* Adjust spacing between objects */
+            }
+            .tooltip .tooltip-text {
+                text-align: center; /* Ensure text is properly aligned */
+                margin: 0 auto; /* Center text horizontally */
+                font-size: 16px; /* Increase font size for readability */
             }
 
-            @media (max-width: 768px) {
-                .tooltip img {
-                    width: 100%;
-                    max-width: 300px;
-                    height: auto;
-                }
+            #valise {
+            display: none; /* Hide the suitcase */
+            }
 
-                .tooltip .tooltip-text {
-                    position: static;
-                    margin-top: 10px;
-                    bottom: auto;
-                    left: auto;
-                    margin-left: 0;
-                    width: auto;
-                    background-color: transparent;
-                    color: #646C36;
-                    font-size: 16px;
-                }
+            #contenu {
+            display: grid; /* Use grid layout */
+            grid-template-columns: repeat(2, 1fr); /* Two objects per row */
+            gap: 15px; /* Add more spacing between objects */
+            justify-items: center; /* Center objects horizontally */
+            padding: 10px; /* Add padding for better spacing */
             }
 
             .tooltip .tooltip-text {
-                visibility: hidden;
-                width: 120px;
-                background-color: #646C36;
-                color: #fff;
-                text-align: center;
-                border-radius: 5px;
-                padding: 5px;
-                font-size: 14px;
-                position: absolute;
-                z-index: 1;
-                bottom: 125%; /* Positionner le tooltip au-dessus */
-                left: 50%;
-                margin-left: -60px; /* Centrer le tooltip */
-                opacity: 0;
-                transition: opacity 0.3s;
+            visibility: visible; /* Always show legends */
+            opacity: 1;
+            position: static; /* Remove absolute positioning */
+            margin-left: 0; /* Reset centering */
+            bottom: auto; /* Reset positioning */
+            background-color: transparent; /* Remove background */
+            color: #646C36; /* Change text color */
+            font-size: 14px; /* Adjust font size for readability */
+            text-align: center;
+            padding: 5px; /* Add slight padding for better spacing */
+            word-wrap: break-word; /* Ensure text wraps properly */
             }
 
-            .tooltip:hover .tooltip-text {
-                visibility: visible;
-                opacity: 1;
+            .objet {
+            width: 80px; /* Adjust object size for smaller screens */
+            height: auto; /* Maintain aspect ratio */
             }
-        </style>
+        }
+    </style>
+</head>
 
-
-    </head>
-    <body>
-        <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W6HDQ4X3"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W6HDQ4X3"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-        <header>
-            <img src="assets/logo.png" id="logo" alt="Logo Studio ChapChap">
-        </header>
-        <div class="container">
-            <img src="assets/ouvremoi.png" alt="ouvrir moi" class="logo">
-            <img src="assets/valise.png" id="valise" alt="Valise" onclick="ouvrirValise()">
-            
-            <div id="contenu" class="hidden">
-                <div class="tooltip">
-                    <img src="assets/carnet.png" class="objet" onclick="goToPage('dessin.html')" alt="Carnet">
-                    <span class="tooltip-text">Illustrations</span>
-                </div>
-                <div class="tooltip">
-                    <img src="assets/camera.png" class="objet" onclick="goToPage('video.html')" alt="Video">
-                    <span class="tooltip-text">Clips et courts métrages</span>
-                </div>
-                <div class="tooltip">
-                    <img src="assets/telephone.png" class="objet" onclick="goToPage('animations-courtes.html')" alt="Animations Courtes">
-                    <span class="tooltip-text">Animations Courtes</span>
-                </div>
-                <div class="tooltip">
-                    <img src="assets/badge.png" class="objet" onclick="goToPage('presentation.html')" alt="Badge">
-                    <span class="tooltip-text">Présentation</span>
-                </div>
+
+    <header>
+        <img src="assets/logo.png" id="logo" alt="Logo Studio ChapChap">
+    </header>
+    <div class="container">
+        <img src="assets/ouvremoi.png" alt="ouvrir moi" class="logo">
+        <img src="assets/valise.png" id="valise" alt="Valise" onclick="ouvrirValise()">
         
+        <div id="contenu" class="hidden">
+            <div class="tooltip">
+                <img src="assets/carnet.png" class="objet" onclick="goToPage('dessin.html')" alt="Carnet">
+                <span class="tooltip-text">Illustrations</span>
+            </div>
+            <div class="tooltip">
+                <img src="assets/camera.png" class="objet" onclick="goToPage('video.html')" alt="Video">
+                <span class="tooltip-text">Clips et courts métrages</span>
+            </div>
+            <div class="tooltip">
+                <img src="assets/telephone.png" class="objet" onclick="goToPage('animations-courtes.html')" alt="Animations Courtes">
+                <span class="tooltip-text">Animations Courtes</span>
+            </div>
+            <div class="tooltip">
+                <img src="assets/badge.png" class="objet" onclick="goToPage('presentation.html')" alt="Badge">
+                <span class="tooltip-text">Présentation</span>
             </div>
         </div>
-    </body>
-
+    </div>
+    </div>
     <script src="script.js"></script>
-
-
-<footer>
-      <div class="footer-links" style="text-align: center; font-size: 18px;color: #646C36">
+    <footer>
+        <div class="footer-links" style="text-align: center; font-size: 18px;color: #646C36">
             <a href="mentionslegales.html">Mentions légales</a>
             <a href="confidentialite.html">Politique de confidentialité</a>
-      </div>
- </footer>
+        </div>
+    </footer>
 </body>
 
 
