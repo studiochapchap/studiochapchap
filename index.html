@@ -49,12 +49,29 @@
 
         /* Media query for mobile devices */
         @media (max-width: 600px) {
+            .logo {
+                display: none; /* Hide "ouvre moi" */
+            }
+
             #valise {
-            display: none; /* Hide the suitcase */
+                display: none; /* Hide the suitcase */
             }
 
             #contenu {
-            display: block; /* Make the objects visible */
+                display: block; /* Make the objects visible */
+            }
+
+            .tooltip .tooltip-text {
+                visibility: visible; /* Always show legends */
+                opacity: 1;
+                position: static; /* Remove absolute positioning */
+                margin-left: 0; /* Reset centering */
+                bottom: auto; /* Reset positioning */
+                background-color: transparent; /* Remove background */
+                color: #646C36; /* Change text color */
+                font-size: 16px; /* Adjust font size */
+                text-align: center;
+                padding: 0; /* Remove padding */
             }
         }
     </style>
