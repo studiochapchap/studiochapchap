@@ -1,198 +1,214 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-W6HDQ4X3');</script>
-    <!-- End Google Tag Manager -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        @media (max-width: 768px) {
-            .presentation-container {
-                flex-direction: column;
-                text-align: center;
-                margin: 50px auto;
-                font-size: 20px;
-                margin: 20px auto;
-                max-width: 90%;
-                line-height: 1.6;
-                padding: 0 15px;
-                text-align: center;
-            }
-            .portrait {
-                width: 100%;
-                margin: 0 auto 20px auto;
-            }
-            .texte-presentation {
-                font-size: 18px;
-                max-width: 100%;
-            }
-            .info-paris-container {
-                flex-direction: column;
-                align-items: center;
-            }
-            .info-paris-text {
-                margin-left: 0;
-                margin-top: 10px;
-                text-align: center;
-            }
-            .contacts {
-                font-size: 18px;
-            }
-            .contacts a {
-                font-size: 18px;
-            }
-            .actualites {
-                max-width: 100%;
-                margin: 20px auto;
-                padding: 10px;
-            }
-            .actualites h2 {
-                font-size: 24px;
-            }
-            .actualites p {
-                font-size: 18px;
-            }
-            .retour-menu {
-                font-size: 18px;
-            }
-        }
-    </style>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Présentation</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Syne+Tactile&display=swap');
-        
-        .presentation-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: left;
-            max-width: 1000px;
-            margin: 100px auto; /* Descente de tout l'ensemble */
-        }
-        .portrait {
-            width: 600px; /* Augmentation de la taille de l'image */
-            height: auto;
-            margin-right: 30px; /* Décalage plus important de l'image */
-        }
-        .texte-presentation {
-            font-family: 'Syne Tactile', sans-serif;
-            color: #646C36;
-            font-size: 24px; /* Augmentation de la taille du texte */
-            max-width: 600px;
-        }
-        .info-paris-container {
-            display: flex;
-            align-items: center; /* Aligner le texte et l'image */
-        }
-        .info-paris {
-            width: 70px;
-            height: auto;
-            
-        }
-        .info-paris-text {
-            margin-left: 15px; /* Espacement entre l'image et le texte */
-            font-size: 22px;
-            color: #646C36;
-        }
-        .contacts {
-            margin-top: 100px; /* Légère descente des contacts */
-            font-size: 24px; /* Augmentation de la taille du texte */
-        }
-        .contacts a {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            color: #646C36;
-            margin: 10px 0;
-            font-size: 24px; /* Augmentation de la taille du texte */
-        }
-        .contacts img {
-            width: 32px;
-            height: 32px;
-            margin-right: 10px;
-        }
-        .retour-menu {
-            text-align: center;
-            margin-top: 50px; /* Descente du lien retour menu */
-            font-size: 20px;
-        }
-        .retour-menu a {
-            text-decoration: none;
-            color: #646C36;
-            font-weight: bold;
-            font-size: 16px;
-            padding: 10px;
-            display: inline-block;
-            background-color: #f4f4f4;
-            border-radius: 5px;
-            text-align: center;
-        }
-        .actualites {
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: #f4f4f4;
-            border-radius: 10px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .actualites h2 {
-            font-family: 'Syne Tactile', sans-serif;
-            color: #646C36;
-            font-size: 28px;
-            text-align: center;
-        }
-        .actualites p {
-            font-family: 'Syne Tactile', sans-serif;
-            color: #333;
-            font-size: 22px;
-            margin-top: 10px;
-        }
-    </style>
+    })(window,document,'script','dataLayer','GTM-W6HDQ4X3');
+  </script>
+  <!-- End Google Tag Manager -->
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Présentation</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Syne+Tactile&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Syne Tactile', sans-serif;
+      color: #646C36;
+      background-color: #fff;
+    }
+
+    .presentation-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      max-width: 1000px;
+      margin: 100px auto 50px auto;
+      padding: 0 20px;
+    }
+
+    .portrait {
+      max-width: 100%;
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    .texte-presentation {
+      max-width: 600px;
+      font-size: 22px;
+      line-height: 1.6;
+      text-align: left;
+    }
+
+    .info-paris-container {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .info-paris {
+      width: 50px;
+      height: auto;
+    }
+
+    .info-paris-text {
+      margin-left: 15px;
+      font-size: 20px;
+    }
+
+    .contacts {
+      margin-top: 40px;
+      font-size: 20px;
+    }
+
+    .contacts a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: #646C36;
+      margin: 10px 0;
+    }
+
+    .contacts img {
+      width: 28px;
+      height: 28px;
+      margin-right: 10px;
+    }
+
+    .retour-menu {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .retour-menu a {
+      text-decoration: none;
+      color: #646C36;
+      font-weight: bold;
+      font-size: 16px;
+      padding: 10px;
+      display: inline-block;
+      background-color: #f4f4f4;
+      border-radius: 5px;
+    }
+
+    .actualites {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #f4f4f4;
+      border-radius: 10px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .actualites h2 {
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .actualites p {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+
+    /* ----------- Responsive Mobile ----------- */
+    @media (max-width: 768px) {
+      .presentation-container {
+        flex-direction: column;
+        margin: 50px auto;
+        text-align: center;
+      }
+
+      .texte-presentation {
+        font-size: 18px;
+        text-align: center;
+      }
+
+      .info-paris-container {
+        flex-direction: column;
+      }
+
+      .info-paris-text {
+        margin-left: 0;
+        margin-top: 10px;
+      }
+
+      .contacts, .contacts a {
+        font-size: 18px;
+        justify-content: center;
+      }
+
+      .actualites {
+        margin: 20px;
+        padding: 15px;
+      }
+
+      .actualites h2 {
+        font-size: 24px;
+      }
+
+      .actualites p {
+        font-size: 18px;
+      }
+
+      .retour-menu {
+        font-size: 18px;
+        padding: 10px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W6HDQ4X3"
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W6HDQ4X3"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <div class="presentation-container">
-        <img src="assets/andrea1.png" alt="Andrea" class="portrait">
-        <div class="texte-presentation">
-            <p>Artiste autoproclamée autodidacte menant une vie entre carrière dans les clous et projets artistiques hors des cadres.</p> 
-            <p>Détentrice de nombreuses lubies.</p>
-            <p>Aussi littératrice de troisième ordre (à l'essai).</p>
-            <div class="info-paris-container">
-                <img src="assets/paris.png" alt="Actuellement basée à Paris" class="info-paris">
-                <p class="info-paris-text">Actuellement basée à Paris</p>
-            </div>
-            <div class="contacts">
-                <a href="https://www.instagram.com/studiochapchap" target="_blank"><img src="assets/insta.png" alt="Instagram"> @studiochapchap</a>
-                <a href="https://www.tiktok.com/@studiochapchap" target="_blank"><img src="assets/tiktok.png" alt="TikTok"> @studiochapchap</a>
-                <a href="mailto:studiochapchap@gmail.com"><img src="assets/email.png" alt="Email"> studiochapchap@gmail.com</a>
-            </div>
-        </div>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <div class="presentation-container">
+    <img src="assets/andrea1.png" alt="Andrea" class="portrait">
+    <div class="texte-presentation">
+      <p>Artiste autoproclamée autodidacte menant une vie entre carrière dans les clous et projets artistiques hors des cadres.</p> 
+      <p>Détentrice de nombreuses lubies.</p>
+      <p>Aussi littératrice de troisième ordre (à l'essai).</p>
+      <div class="info-paris-container">
+        <img src="assets/paris.png" alt="Actuellement basée à Paris" class="info-paris">
+        <p class="info-paris-text">Actuellement basée à Paris</p>
+      </div>
+      <div class="contacts">
+        <a href="https://www.instagram.com/studiochapchap" target="_blank">
+          <img src="assets/insta.png" alt="Instagram"> @studiochapchap
+        </a>
+        <a href="https://www.tiktok.com/@studiochapchap" target="_blank">
+          <img src="assets/tiktok.png" alt="TikTok"> @studiochapchap
+        </a>
+        <a href="mailto:studiochapchap@gmail.com">
+          <img src="assets/email.png" alt="Email"> studiochapchap@gmail.com
+        </a>
+      </div>
     </div>
-    <div class="actualites">
-        <h2>Dernières actualités</h2>
-<p>- <a href="https://online.fliphtml5.com/kppfx/ozon/#p=1" target="_blank">Texte publié dans la revue DuCoeur.</a></p>
-<p>- <a href="https://open.spotify.com/track/7eXQkZVaQeFpTWKNYGC6ov?si=WnmGOry7QYG13aS4-TjgOg" target="_blank">Visuel sorti pour le morceau "Pas Trop Jolie" de Nina Battisti.</a></p>
-        <p>- Animation pour le court-métrage Lilith de Cyrielle Le Roch diffusé au festival Objectif Censier</p>
-    </div>
+  </div>
 
+  <div class="actualites">
+    <h2>Dernières actualités</h2>
+    <p>- <a href="https://online.fliphtml5.com/kppfx/ozon/#p=1" target="_blank">Texte publié dans la revue DuCoeur.</a></p>
+    <p>- <a href="https://open.spotify.com/track/7eXQkZVaQeFpTWKNYGC6ov?si=WnmGOry7QYG13aS4-TjgOg" target="_blank">Visuel sorti pour le morceau "Pas Trop Jolie" de Nina Battisti.</a></p>
+    <p>- Animation pour le court-métrage Lilith de Cyrielle Le Roch diffusé au festival Objectif Censier</p>
+  </div>
 
-
-    <div class="retour-menu">
-        <a href="index.html">Retourner au menu</a>
-        <div style="margin-top: 20px;"></div>
-    </div>
-
-
-
+  <div class="retour-menu">
+    <a href="index.html">Retourner au menu</a>
+  </div>
 </body>
 </html>
