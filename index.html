@@ -51,7 +51,17 @@
         /* Media query for mobile devices */
         @media (max-width: 600px) {
             .logo {
-            display: none; /* Hide "ouvre moi" */
+                display: none; /* Hide "ouvre moi" */
+            }
+            .objet {
+                width: 100px; /* Increase object size for better visibility */
+                height: auto; /* Maintain aspect ratio */
+            }
+
+            .tooltip .tooltip-text {
+                text-align: center; /* Ensure text is properly aligned */
+                margin: 0 auto; /* Center text horizontally */
+                font-size: 16px; /* Increase font size for readability */
             }
 
             #valise {
