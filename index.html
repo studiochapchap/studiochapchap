@@ -27,18 +27,16 @@
 
         .tooltip .tooltip-text {
             visibility: hidden;
-            display: none;
             width: 120px;
             background-color: #646C36;
             color: #fff;
             text-align: center;
             border-radius: 5px;
             padding: 5px;
-            display: block; /* Ensure objects and legends appear directly */
             font-size: 14px;
             position: absolute;
             z-index: 1;
-            bottom: 125%; /* Positionner le tooltip au-dessus */
+            bottom: 105%; /* Positionner le tooltip au-dessus */
             left: 50%;
             margin-left: -60px; /* Centrer le tooltip */
             opacity: 0;
@@ -55,18 +53,16 @@
             .logo {
                 display: none; /* Hide "ouvre moi" */
             }
-
             .objet {
                 width: 100px; /* Increase object size for better visibility */
                 height: auto; /* Maintain aspect ratio */
             }
-            #contenu {
-                grid-template-columns: 1fr; /* One object per row */
-                gap: 10px; /* Adjust spacing between objects */
-            }
+
             .tooltip .tooltip-text {
                 text-align: center; /* Ensure text is properly aligned */
                 margin: 0 auto; /* Center text horizontally */
+                max-width: 100%; /* Ensure text doesn't overflow */
+                word-wrap: break-word; /* Wrap text properly */
                 font-size: 16px; /* Increase font size for readability */
             }
 
@@ -76,7 +72,7 @@
 
             #contenu {
             display: grid; /* Use grid layout */
-            grid-template-columns: repeat(2, 1fr); /* Two objects per row */
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Responsive grid layout */
             gap: 15px; /* Add more spacing between objects */
             justify-items: center; /* Center objects horizontally */
             padding: 10px; /* Add padding for better spacing */
@@ -97,8 +93,9 @@
             }
 
             .objet {
-            width: 80px; /* Adjust object size for smaller screens */
-            height: auto; /* Maintain aspect ratio */
+                width: 120px; /* Increase object size for better visibility */
+                height: auto; /* Maintain aspect ratio */
+                margin: 0 auto; /* Center objects horizontally */
             }
         }
     </style>
@@ -131,6 +128,17 @@
                 <span class="tooltip-text">Animations Courtes</span>
             </div>
             <div class="tooltip">
+                <img src="assets/portfolio.png" class="objet" onclick="goToPage('portfolio.html')" alt="Portfolio">
+                <span class="tooltip-text">Portfolio complet</span>
+            </div>
+    
+            <div class="tooltip">
+                <img src="assets/shop.png" class="objet" onclick="window.open('https:https://ko-fi.com/studiochapchap/shop', '_blank')" alt="Shop">
+                <span class="tooltip-text">Shop</span>
+            </div>
+
+    
+            <div class="tooltip">
                 <img src="assets/badge.png" class="objet" onclick="goToPage('presentation.html')" alt="Badge">
                 <span class="tooltip-text">Présentation</span>
             </div>
@@ -145,7 +153,4 @@
         </div>
     </footer>
 </body>
-
-
-
 </html>

@@ -20,6 +20,28 @@
             padding: 10px; /* Add some padding */
             text-align: center; /* Center the text */
         }
+
+        @media (max-width: 768px) {
+            #video-caption {
+                font-size: 1.2em; /* Slightly smaller font size for mobile */
+                padding: 5px; /* Reduce padding for smaller screens */
+            }
+
+            .video-container {
+                flex-direction: column; /* Stack elements vertically */
+                align-items: center; /* Center elements */
+            }
+
+            .arrow {
+                width: 40px; /* Adjust arrow size for mobile */
+                height: 40px;
+            }
+
+            iframe {
+                width: 100%; /* Make video responsive */
+                height: auto;
+            }
+        }
     </style>
 </head>
 <body>
@@ -28,7 +50,7 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <header>
-        <a href="indexmobile.html">
+        <a href="index.html">
             <img src="assets/logoclips.png" id="logo" alt="Logo Studio ChapChap">
         </a>
     </header>
